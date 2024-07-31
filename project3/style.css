@@ -1,0 +1,1148 @@
+/* 언어 설정 */
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/*
+구글폰트
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  
+  font-family: "Alex Brush", cursive;
+  font-weight: 400;
+  font-style: normal;
+*/
+
+
+/* 전체 설정 */
+* {
+    margin: 0;
+    padding: 0;
+}
+ul, ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+img {
+    vertical-align: bottom;
+}
+body {
+    font-family: "Noto Sans KR", sans-serif;
+}
+body.on {
+    height: 3000px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+}
+body.on::-webkit-scrollbar{
+    display:none;
+}
+
+
+
+
+/* 인트로 설정 */
+.intro {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    transition: all 2s;
+}
+.intro.fadeout {
+    opacity: 0;
+    z-index: 1;
+}
+.intro.fadein {
+    opacity: 1;
+    z-index: 999;
+}
+
+.intro video {
+    width: 100%;
+    height: auto;
+}
+
+.intro_txt {}
+.intro_txt div {
+    position: absolute;
+}
+.intro_txt .intro_txt1 {
+    font-size: 30px;
+    font-weight: normal;
+    color: #398AB9;
+    letter-spacing: 47px;
+    width: 220px;
+    height: 40px;
+    left: 35%;
+    top: 45%;
+    margin-top: -20px;
+    opacity: 0;
+    transition: all 1.5s;
+}
+.intro_txt .intro_txt1.on {
+    opacity: 1;
+    top: 50%;
+}
+
+.intro_txt .intro_txt2 {
+    width: 30px;
+    height: 130px;
+    left: 49%;
+    top: 50%;
+    margin-left: -15px;
+    margin-top: -65px;
+    text-align: center;
+    opacity: 0;
+    transition: all 1.5s;
+    transition-delay: 1.5s;
+}
+.intro_txt .intro_txt2.on {
+    opacity: 1;
+    left: 50%;
+}
+.intro_txt .intro_txt2 p {
+    font-size: 32px;
+    font-weight: bold;
+    color: #398AB9;
+}
+
+.intro_txt .intro_txt3 {
+    font-size: 30px;
+    font-weight: normal;
+    color: #398AB9;
+    letter-spacing: 15px;
+    width: 220px;
+    height: 40px;
+    right: 35%;
+    top: 45%;
+    margin-top: -20px;
+    opacity: 0;
+    transition: all 1.5s;
+    transition-delay: 3s;
+}
+.intro_txt .intro_txt3.on {
+    opacity: 1;
+    top: 50%;
+}
+
+.intro_btn {
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    margin-left: -75px;
+    font-size: 18px;
+    color: #398AB9;
+    border: 2px solid #398AB9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transition: all 0.7s;
+    cursor: pointer;
+}
+.intro_btn:hover {
+    background-color: #AACADD;
+}
+
+
+
+
+/* 로고설정 */
+h1 {
+    position: fixed;
+    font-size: 30px;
+    font-weight: bold;
+    color: #398AB9;
+    left: 30px;
+    top: 20px;
+    z-index: 99;
+    transition: all 1.5s;
+    cursor: pointer;
+}
+h1 span {
+    display: inline-block;
+}
+
+h1.on {
+    top: 55%; 
+    left: 5%;
+    font-size: 130px;
+    line-height: 1;
+}
+h1.on span {
+    display: block;
+}
+
+
+
+
+/* 내비 설정 */
+nav {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -120px;
+    width: 220px;
+    height: 240px;
+    z-index: 99;
+}
+nav ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+nav li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #398AB9;
+    position: relative;
+    cursor: pointer;
+}
+nav div {
+    width: 70%;
+    text-align: right;
+    padding-right: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: all 0.6s;
+}
+nav li.on div {
+    opacity: 1;
+}
+nav li.on p {
+    border: 3px solid #398AB9;
+}
+nav li.on em {
+    opacity: 1;
+}
+nav li:hover div {
+    opacity: 1;
+}
+
+nav p {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #FCCF76;
+}
+nav em {
+    width: 50px;
+    height: 2px;
+    background-color: #398AB9;
+    opacity: 0;
+}
+
+
+
+
+/* section article 화면구조 설정 */
+section {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #aaa;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+section article {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 1.8s;
+}
+
+section article:nth-child(1) {
+    left: 0;
+    top: 0;
+}
+section article:nth-child(2) {
+    left: -100%;
+    top: -100%;
+}
+section article:nth-child(3) {
+    left: 100%;
+    top: -100%;
+}
+section article:nth-child(4) {
+    left: -100%;
+    top: 100%;
+}
+section article:nth-child(5) {
+    left: 100%;
+    top: 100%;
+}
+section article.on {
+    left: 0;
+    top: 0;
+}
+
+
+
+
+/* home 설정 */
+.home {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url(img/home.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.home p {
+    position: absolute;
+    right: 50px;
+    top: 23%;
+    font-family: "Alex Brush", cursive;
+    font-size: 50px;
+    color: #fff;
+    text-align: right;
+    line-height: 0.9;
+}
+.home i {
+    font-size: 35px;
+    animation: ani1 1s linear infinite;
+}
+
+@keyframes ani1 {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(20px);
+    }
+}
+
+
+
+
+/* about 설정 */
+.about {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+}
+.about::-webkit-scrollbar{
+    display:none;
+}
+
+/* about1 설정 */
+.about1 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/about01.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    background-attachment: fixed;
+}
+.about1 h2 {
+    font-size: 120px;
+    font-family: "Alex Brush", cursive;
+    font-weight: normal;
+    color: #FCCF76;
+    position: absolute;
+    right: 32%;
+    top: 26%;
+}
+.about1 .profile {
+    position: absolute;
+    width: 480px;
+    height: 350px;
+    background-color: rgba(255, 255, 255, 0.7);
+    right: 22%;
+    top: 30%;
+    box-shadow: 5px 5px 10px #aaa;
+    padding: 35px 50px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: all 1.5s;
+    transition-delay: 0.5s;
+}
+.about1 .profile.on {
+    top: 43%;
+    opacity: 1;
+}
+
+.about1 .profile h4 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #398AB9;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #bbb;
+}
+.about1 .profile h4 span {
+    font-size: 16px;
+    font-weight: normal;
+    margin-left: 30px;
+}
+.about1 .profile ul {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 170px;
+    justify-content: space-between;
+}
+.about1 .profile li {
+    font-size: 20px;
+    font-weight: bold;
+    color: #398AB9;
+    display: flex;
+    justify-content: space-between;
+}
+.about1 .profile li span {
+    font-weight: normal;
+    color: #65A9C7;
+}
+.about1 .insta {
+    position: absolute;
+    width: 120px;
+    height: 38px;
+    background-color: #FCCF76;
+    right: 17%;
+    top: 45%;
+    text-align: center;
+    line-height: 2;
+    animation: ani2 2s infinite;
+}
+.about1 .insta a {
+    font-size: 18px;
+    color: #398AB9;
+}
+
+.about1 .mouse {
+    width: 30px;
+    height: 60px;
+    border: 1px solid #398AB9;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    margin-left: -15px;
+    bottom: 30px;
+}
+.about1 .scroll {
+    width: 8px;
+    height: 8px;
+    background-color: #2663A2;
+    border-radius: 50%;
+    margin-top: 15px;
+    animation: ani4 2s infinite;
+}
+
+@keyframes ani2 {
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(-10deg);
+    }
+    20%{
+        transform: rotate(10deg);
+    }
+    30%{
+        transform: rotate(-10deg);
+    }
+    40%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes ani4 {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(25px);
+    }
+}
+
+
+
+
+/* about2 설정 */
+.about2 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/about02.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;
+    position: relative;
+}
+.about2 h2 {
+    font-size: 120px;
+    font-family: "Alex Brush", cursive;
+    font-weight: normal;
+    color: #FCCF76;
+    position: absolute;
+    left: 13%;
+    top: 33%;
+}
+.about2 .awards {
+    position: absolute;
+    width: 550px;
+    height: 350px;
+    background-color: rgba(255, 255, 255, 0.7);
+    left: 14%;
+    top: 30%;
+    box-shadow: 5px 5px 10px #aaa;
+    padding: 35px 50px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: all 1.5s;
+}
+.about2 .awards.on {
+    top: 48%;
+    opacity: 1;
+}
+
+.about2 .awards ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.about2 .awards li {
+    font-size: 18px;
+    font-weight: bold;
+    color: #398AB9;
+}
+.about2 .awards li span {
+    font-size: 18px;
+    font-weight: normal;
+    color: #65A9C7;
+    margin-right: 25px;
+}
+.about2 .watch {
+    position: absolute;
+    width: 220px;
+    height: 38px;
+    background-color: #FCCF76;
+    left: 40%;
+    bottom: 26%;
+}
+.about2 .watch a {
+    height: 100%;
+    font-size: 18px;
+    color: #398AB9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about2 .watch a i {
+    font-size: 30px;
+    color: red;
+    margin-right: 10px;
+    animation: ani3 1.2s infinite;
+}
+
+@keyframes ani3 {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+
+
+/* gal 설정 */
+.gal {}
+.gal_inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #F8E6C2;
+    transition: all 0.8s;
+}
+.gal_inner.on {
+    background-color: #AACADD;
+}
+
+/* gal_img 설정 */
+.gal_img {
+    width: 1500px;
+    height: 690px;
+    position: absolute;
+    left: 8%;
+    top: 10%;
+}
+.gal_img>div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all 1.3s;
+}
+.gal_img>div.on {
+    opacity: 1;
+    z-index: 99;
+}
+.gal_img>div.on p {
+    transform: rotateY(360deg);
+}
+.gal_img>div>p {
+    transition: all 1.1s;
+    background-size: cover;
+    background-position: center center;
+    cursor: pointer;
+}
+.gal_img>div>p:hover {
+    transform: scale(1.1);
+    z-index: 99;
+}
+
+.gal_img .gal_img1 {}
+.gal_img .gal_img1 p {}
+.gal_img .gal_img1 p:nth-child(1) {
+    width: 450px;
+    height: 400px;
+    background-image: url(img/gallery_screen01.png);
+}
+.gal_img .gal_img1 p:nth-child(2) {
+    width: 450px;
+    height: 360px;
+    background-image: url(img/gallery_screen02.jpg);
+}
+.gal_img .gal_img1 p:nth-child(3) {
+    width: 600px;
+    height: 360px;
+    background-image: url(img/gallery_screen03.jpg);
+}
+.gal_img .gal_img1 p:nth-child(4) {
+    width: 225px;
+    height: 290px;
+    background-image: url(img/gallery_screen04.png);
+}
+.gal_img .gal_img1 p:nth-child(5) {
+    width: 225px;
+    height: 290px;
+    background-image: url(img/gallery_screen05.png);
+}
+.gal_img .gal_img1 p:nth-child(6) {
+    width: 600px;
+    height: 330px;
+    margin-top: -40px;
+    background-image: url(img/gallery_screen06.jpg);
+}
+.gal_img .gal_img1 p:nth-child(7) {
+    width: 450px;
+    height: 330px;
+    margin-top: -40px;
+    background-image: url(img/gallery_screen07.jpg);
+}
+
+.gal_img .gal_img2 {}
+.gal_img .gal_img2 p {}
+.gal_img .gal_img2 p:nth-child(1) {
+    width: 375px;
+    height: 345px;
+    background-image: url(img/gallery_megazine01.jpg);
+    background-position: center 40%;
+}
+.gal_img .gal_img2 p:nth-child(2) {
+    width: 375px;
+    height: 345px;
+    background-image: url(img/gallery_megazine02.jpg);
+    background-position: center 10%;
+}
+.gal_img .gal_img2 p:nth-child(3) {
+    width: 750px;
+    height: 345px;
+    background-image: url(img/gallery_megazine03.png);
+    background-position: center center;
+}
+.gal_img .gal_img2 p:nth-child(4) {
+    width: 375px;
+    height: 345px;
+    background-image: url(img/gallery_megazine04.jpg);
+    background-position: center 80%;
+}
+.gal_img .gal_img2 p:nth-child(5) {
+    width: 375px;
+    height: 345px;
+    background-image: url(img/gallery_megazine05.jpg);
+    background-position: center 20%;
+}
+.gal_img .gal_img2 p:nth-child(6) {
+    width: 250px;
+    height: 345px;
+    background-image: url(img/gallery_megazine06.jpg);
+}
+.gal_img .gal_img2 p:nth-child(7) {
+    width: 250px;
+    height: 345px;
+    background-image: url(img/gallery_megazine07.jpg);
+}
+.gal_img .gal_img2 p:nth-child(8) {
+    width: 250px;
+    height: 345px;
+    background-image: url(img/gallery_megazine08.png);
+}
+
+.gal_img .gal_img3 {}
+.gal_img .gal_img3 p {}
+.gal_img .gal_img3 p:nth-child(1) {
+    width: 450px;
+    height: 345px;
+    background-image: url(img/gallery_daily01.jpg);
+    background-position: center 80%;
+}
+.gal_img .gal_img3 p:nth-child(2) {
+    width: 450px;
+    height: 345px;
+    background-image: url(img/gallery_daily02.jpg);
+    background-position: center 20%;
+}
+.gal_img .gal_img3 p:nth-child(3) {
+    width: 300px;
+    height: 345px;
+    background-image: url(img/gallery_daily03.jpg);
+}
+.gal_img .gal_img3 p:nth-child(4) {
+    width: 300px;
+    height: 345px;
+    background-image: url(img/gallery_daily04.jpg);
+}
+.gal_img .gal_img3 p:nth-child(5) {
+    width: 450px;
+    height: 345px;
+    background-image: url(img/gallery_daily05.png);
+    background-position: center 40%;
+}
+.gal_img .gal_img3 p:nth-child(6) {
+    width: 450px;
+    height: 345px;
+    background-image: url(img/gallery_daily06.jpg);
+    background-position: center top;
+}
+.gal_img .gal_img3 p:nth-child(7) {
+    width: 300px;
+    height: 345px;
+    background-image: url(img/gallery_daily07.jpg);
+}
+.gal_img .gal_img3 p:nth-child(8) {
+    width: 300px;
+    height: 345px;
+    background-image: url(img/gallery_daily08.jpg);
+    background-position: center 95%;
+}
+
+
+
+
+/* gal_menu 설정 */
+.gal_menu {
+    position: absolute;
+    left: 8%;
+    bottom: 5%;
+}
+.gal_menu ul {
+    display: flex;
+}
+.gal_menu li {
+    color: #fff;
+    font-size: 35px;
+    font-family: "Alex Brush", cursive;
+    cursor: pointer;
+    width: 170px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.8s;
+}
+.gal_menu li.on {
+    background-color: #2663A2;
+}
+.gal_menu li.on2 {
+    background-color: #FF9567;
+}
+
+
+
+
+/* filmo 설정 */
+.filmo {
+    background-color: #AACADD;
+}
+
+.filmo h2 {
+    font-size: 120px;
+    font-family: "Alex Brush", cursive;
+    font-weight: normal;
+    color: #FCCF76;
+    position: absolute;
+    left: 35%;
+    top: 5%;
+}
+.filmo .projector {
+    position: absolute;
+    left: 0;
+    top: 35%;
+}
+.filmo .projector img {
+    width: 280px;
+    height: auto;
+}
+.filmo .slate {
+    position: absolute;
+    left: 16%;
+    top: 20%;
+    font-size: 40px;
+    font-family: "Alex Brush", cursive;
+    font-weight: normal;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.filmo .slate img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+    animation: ani5 1.5s infinite;
+}
+.filmo .frame2 {
+    position: absolute;
+    right: 0;
+    top: 12%;
+}
+.filmo .frame2 img {
+    width: 850px;
+    height: auto;
+    opacity: 0.1;
+}
+
+@keyframes ani5 {
+    0%{
+        transform: rotate(-20deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(-20deg);
+    }
+}
+
+
+
+
+/* filmo_center 설정 */
+.filmo_center {
+    width: 1370px;
+    height: 630px;
+    position: absolute;
+    left: 16%;
+    top: 26%;
+    overflow: hidden;
+}
+
+.filmo_center ul {
+    width: 2800px;
+    height: 630px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+}
+.filmo_center li {
+    width: 400px;
+    height: 630px;
+    position: relative;
+}
+.filmo_center li>img {
+    width: 400px;
+    height: 360px;
+}
+.filmo_center li>p {
+    width: 384px;
+    height: 254px;
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    left: 8px;
+    top: 52px;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.5s;
+}
+.filmo_center li:nth-child(1)>p {
+    background-image: url(img/filmography_film01.png);
+}
+.filmo_center li:nth-child(2)>p {
+    background-image: url(img/filmography_film02.jpg);
+}
+.filmo_center li:nth-child(3)>p {
+    background-image: url(img/filmography_film03.jpg);
+}
+.filmo_center li:nth-child(4)>p {
+    background-image: url(img/filmography_film04.jpg);
+}
+.filmo_center li:nth-child(5)>p {
+    background-image: url(img/filmography_film05.jpg);
+}
+.filmo_center li:nth-child(6)>p {
+    background-image: url(img/filmography_film06.jpg);
+}
+.filmo_center li:nth-child(7)>p {
+    background-image: url(img/filmography_film07.jpg);
+}
+.filmo_center li>p:hover {
+    opacity: 0.7;
+}
+
+
+.filmo_center li>div {
+    width: 330px;
+    height: 200px;
+    position: absolute;
+    left: 9%;
+    top: 50%;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    opacity: 0;
+    transition: all 0.8s;
+    box-shadow: 5px 5px 10px #777;
+}
+.filmo_center li>div.on {
+    opacity: 1;
+    transform: translateY(80px);
+}
+
+.filmo_center li>div img {
+    width: 140px;
+    height: 200px;
+}
+.filmo_center li>div>div {
+    width: 190px;
+    text-align: right;
+    padding-right: 22px;
+    box-sizing: border-box;
+}
+.filmo_center li>div>div em {
+    display: block;
+    font-size: 12px;
+    color: #AACADD;
+    font-style: normal;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.filmo_center li>div>div h5 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2663A2;
+}
+.filmo_center li>div>div p {
+    font-size: 16px;
+    color: #398AB9;
+}
+.filmo_center li>div>div strong {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    color: #FCCF76;
+    height: 95px;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+
+
+
+/* video 설정 */
+.video {
+    background-color: #F8E6C2;
+    cursor: none;
+}
+
+.video .ws {
+    position: absolute;
+    width: 500px;
+    height: auto;
+    left: 0;
+    bottom: 0;
+}
+.video .chick {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    left: 242px;
+    top: 137px;
+    animation: ani6 1s infinite;
+}
+
+@keyframes ani6 {
+    0%{
+        transform: rotate(-7deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-7deg);
+    }
+}
+
+
+
+
+/* videoBox 설정 */
+.videoBox {
+    width: 900px;
+    height: 800px;
+    position: absolute;
+    right: 17%;
+    top: 7%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #FF9567;
+    border-radius: 15px;
+    padding: 50px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.videoBox .video_play {
+    width: 800px;
+    height: 65%;
+    position: relative;
+}
+.videoBox .video_play iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-style: none;
+    display: none;
+    transition: all 0.5s;
+}
+.videoBox .video_play iframe.on {
+    display: block;
+}
+
+.videoBox .video_menu {
+    height: 30%;
+}
+.videoBox .video_menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.videoBox .video_menu li {
+    background-color: #FBB46F;
+    width: 380px;
+    height: 80px;
+    border-radius: 15px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.videoBox .video_menu li.on {
+    background-color: #FF9567;
+}
+
+.videoBox .video_menu li div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #FF9567;
+    border-radius: 15px;
+    transition: all 0.8s;
+    z-index: 1;
+    opacity: 0;
+}
+.videoBox .video_menu li em {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    font-style: normal;
+    line-height: 1.2;
+    z-index: 2;
+}
+
+.videoBox .video_menu li:hover div {
+    width: 100%;
+    opacity: 1;
+}
+
+.video span {
+    position: absolute;
+    right: 17%;
+    top: 0;
+    font-size: 100px;
+    font-family: "Alex Brush", cursive;
+    color: #FF9567;
+}
+
+
+
+
+/* video mouse 설정 */
+.video .mouse {
+    width: 40px;
+    height: 40px;
+    z-index: 999;
+    position: absolute;
+    left: 0;
+    top: 0;
+    user-select: none;
+    pointer-events: none;
+    transition: transform 0.6s;
+}
+.video .mouse img {
+    width: 40px;
+    height: 40px;
+}
+
+.video .mouse.style1 {
+    transform: rotate(360deg);
+}
