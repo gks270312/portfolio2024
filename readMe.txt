@@ -70,12 +70,15 @@ project3_최우식: 디자인, 퍼블리싱 - 신규제작
 5. page3
  - 갤러리 3개의 메뉴 클릭시 각 메뉴에 맞는 이미지
  - transform rotateY
+ - 로고 클릭시 intro 연결
 6. page4
  - 좌우 시소처럼 흔들리는(rotate) animate
  - window scroll function
  - transform translateY
+ - 로고 클릭시 intro 연결
 7. page5
  - 마우스 커서 이미지로 변경
  - mouseenter function
+ - 로고 클릭시 intro 연결
 
 * 작업기간: 70h
