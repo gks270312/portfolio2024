@@ -18,11 +18,33 @@ project3_최우식: 디자인, 퍼블리싱 - 신규제작
 
 
 <project2>
-1. gnb 개
-2.
-3.
-4.
-5.
+1. gnb 6개
+2. 로그인
+ - user 아이콘 클릭시 로그인페이지 연결
+ - 네이버 API 연동
+ - 로고 클릭시 메인페이지 연결
+3. 장바구니
+ - 메뉴의 장바구니 아이콘 클릭시 장바구니 숫자 증가
+ - 상단의 장바구니 아이콘 클릭시 장바구니 list 화면 보임
+ - 결제하기 클릭시 로그인페이지 연결
+ - 장바구니 비우기 클릭시 제품 비워지고 숫자 0으로 변경
+ - X 아이콘 클릭시 장바구니 화면 사라짐
+4. Gongcha MENU
+ - setInterval
+ - trigger
+ - clearInterval
+ - 음료 이미지 클릭시 서브페이지로 연결
+5. Gongcha STORY
+ - transition
+ - transition-delay
+ - window scroll function
+6. Gong cha REVIEW
+ - left값을 활용한 animate
+ - transform scale
+7. 서브페이지
+ - 음료 이미지 click function
+ - 장바구니 버튼 클릭시 장바구니 숫자 증가(장바구니 list의 기능은 위 설명한 것과 동일)
+ - 로고 클릭시 메인페이지 연결
 
 * 작업기간: h
 
@@ -42,7 +64,7 @@ project3_최우식: 디자인, 퍼블리싱 - 신규제작
  - 상하(translateY) animate
  - 좌우 시소처럼 흔들리는(rotate) animate
  - 커졌다 작아졌다 하는(scale) animate
- - scrollTop값에 따라 화면 뜨고 사라짐
+ - window scroll function
  - 로고 클릭시 intro 연결
  - 인스타그램 아이디와 유튜브 아이콘 클릭시 각 페이지 연결
 5. page3
