@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gongcha_Login</title>
+
+    <!-- 외부스타일시트 연결 -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 제이쿼리 CDN -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- 외부스크립트 연결 -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/js.js"></script>
+
+    <!-- 네이버 스크립트 -->
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+
+    <div class="bg">
+        <p><img src="img/login_bg1.png" alt=""></p>
+        <p><img src="img/login_bg2.png" alt=""></p>
+        <p><img src="img/login_bg3.png" alt=""></p>
+
+        
+        <div class="center">
+            <h1><a href="index.html" title="홈으로"><img src="img/logo3.png" alt=""></a></h1>
+
+            <div class="left">
+                <div><img src="img/menu5.png" alt=""></div>
+                <div><img src="img/menu3.png" alt=""></div>
+                <div><img src="img/menu11.png" alt=""></div>
+            </div>
+    
+            <div class="right">
+                <form action="">
+                    <h3>Login</h3>
+
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <label for="">User Name</label><input type="text" placeholder="User Name">
+                            </li>
+                            <li>
+                                <label for="">Password</label><input type="text" placeholder="Password">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="loginBtn">
+                        <p>Login</p>
+                        <div class="naver"><div id="naver_id_login"></div></div>
+                    </div>
+
+                    <div class="more">
+                        <p>아이디 찾기</p>
+                        <p>비밀번호 찾기</p>
+                        <p>회원가입</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!-- //네이버 로그인 버튼 노출 영역 -->
+<script type="text/javascript">
+    var naver_id_login = new naver_id_login("7qWVoiDkh6Oj4vfHCvCA", "http://gks2703.dothome.co.kr");
+    var state = naver_id_login.getUniqState();
+    naver_id_login.setButton("green", 6,50);
+    naver_id_login.setDomain("YOUR_SERVICE_URL");
+    naver_id_login.setState(state);
+    naver_id_login.setPopup();
+    naver_id_login.init_naver_id_login();
+</script>
+    
+</body>
+</html>
