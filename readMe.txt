@@ -14,10 +14,15 @@ project3_최우식: 디자인, 퍼블리싱 - 신규제작
  - trigger
 3. 프로그램 예약
  - jquery Datepicker
- - 
-4.
-5.
-반응형
+ - 예약하기 버튼 클릭 시 예약정보/예약완료 팝업창 확인 가능
+4. 갤러리
+ - setInterval
+ - trigger
+ - clearInterval
+5. 오시는길
+ - 구글맵 연동
+6. 반응형
+7. 전체페이지 스크롤 function
 
 * 작업기간: 70h
 
