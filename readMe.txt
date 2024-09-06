@@ -102,8 +102,8 @@ project3_최우식: 디자인, 퍼블리싱 - 신규제작
 - 교육: (NCS) UIUX & 프론트엔드 개발자 양성 수료(2024.10.)
 - 키워드: 성실한, 꼼꼼한, 책임감 있는, 차분한, 인내심 많은, 이타적인, 예의바른, 신뢰할 수 있는, 협조적인, 눈치빠른
 - 스킬
- 1. photoshop: 60%, 
- 2. figma: 80%,
- 3. html: 85%,
- 4. css: 85%,
- 5. javascript: 60%,
+ 1. photoshop: 60% / toolbar 이해, layer 활용, filter 활용
+ 2. figma: 80% / toolbar 이해, layer 이해 및 제작, frame 제작, 공유 및 저장 
+ 3. html: 85% / html,head,body 구분, 외부스타일시트와 외부스크립트 연결, 박스태그와 리스트태그 작성, 인라인과 블럭의 구분, 자손자의 이해, 링크 연결 
+ 4. css: 85% / 선택자 구분, 크기변환 및 색상변환, 가로정렬 구조, 레이아웃 작성, transform 활용, transition 활용, animation 활용, 미디어쿼리 작성 
+ 5. javascript: 60% / jquery 실행코드 작성, 선택자 작성, 이벤트 연결, if문 활용, setInterval 활용
