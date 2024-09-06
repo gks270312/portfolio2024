@@ -66,7 +66,7 @@ project3_최우식: 디자인, 퍼블리싱 - 신규제작
  - transition
  - transition-delay
  - setTimeout
- - 영상이 끝난 후와 HOME 바로가기 버튼을 클릭했을 때 'fadeout' addClass 설정
+ - 영상이 끝난 후와 HOME 바로가기 버튼 클릭 시 fadeout
 3. HOME
  - 상하 animate
  - 메뉴 클릭 시 각 페이지 연결
